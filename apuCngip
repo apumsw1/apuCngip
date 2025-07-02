@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Function to change IP address
+change_ip() {
+    # Replace with your command to change IP
+    # Example: Using dhclient to renew DHCP lease
+    sudo dhclient -r
+    sudo dhclient
+}
+
+# Infinite loop to change IP every 5 seconds
+while true; do
+    change_ip
+    sleep 5
+done
